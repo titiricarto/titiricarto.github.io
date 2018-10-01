@@ -1,0 +1,381 @@
+data = [
+	{	
+		"institution":	"Titirivida",
+		"province":	"Pinar del Río",
+		"lat":			"22.4133651",
+		"lon":			"-83.6880257",
+		"works":		[]
+	},
+	{	
+		"institution":	"Grupo Alas",
+		"province":		"Pinar del Río",
+		"lat":			"22.4133651",
+		"lon":			"-83.6880257",
+		"works":		[]
+	},
+	{	
+		"institution":	"Guiñol de Holguín",
+		"province":		"Holguín",
+		"photo":		"Holguin.jpg",
+		"lat":			"20.8795129",
+		"lon":			"-76.2594981",
+		"works":		[
+			{
+				"title":		"La Calle de los Fantasmas",
+				"texts":		["La Calle de los Fantasmas"],
+				"technics":		"esperpento y luz negra"
+			}
+		]
+	},
+	{	
+		"institution":	"Guiñol de Santiago de Cuba",
+		"province":		"Santiago de Cuba",
+		"lat":			"20.01693",
+		"lon":			"-75.8301537",
+		"works":		[
+			{
+				"title":		"La Calle de los Fantasmas",
+				"texts":		["La Calle de los Fantasmas"],
+				"technics":		"títere de guante"
+			}
+		]
+	},
+	{	
+		"institution":	"Teatro Callejero Andante",
+		"province":		"Granma",
+		"lat":			"20.3807",
+		"lon":			"-76.6434",
+		"works":		[
+			{
+				"title":		"La Calle de los Fantasmas",
+				"texts":		["La Calle de los Fantasmas"],
+				"technics":		"pelele de piso"
+			}
+		]
+	},
+	{	
+		"institution":	"Los Cuenteros",
+		"province":		"Artemisa",
+		"lat":			"22.7522903",
+		"lon":			"-82.9931607",
+		"works":		[
+			{
+				"title":		"La Calle de los Fantasmas",
+				"texts":		["La Calle de los Fantasmas"],
+				"technics":		"títere de guante"
+			}
+		]
+	},
+	{	
+		"institution":	"El Guiñol de los Zahoríes",
+		"province":		"Las Tunas",
+		"photo":		"Tunas.jpg",
+		"lat":			"20.957938",
+		"lon":			"-76.9527836",
+		"works":		[
+			{
+				"title":		"Los Pícaros Burlados",
+				"texts":		["La Calle de los Fantasmas","El Pícaro Burlado"],
+				"technics":		"títere de mesa"
+			}
+		]	
+	},
+	{	
+		"institution":	"Teatro Papalote",
+		"province":		"Matanzas",
+		"photo":		"Papalote.jpg",
+		"lat":			"22.5767123",
+		"lon":			"-81.3399414",
+		"works":		[
+			{
+				"title":		"Andariegos. Loa a Villafañe",
+				"texts":		["El Fantasma","El Tío y la Sobrina","Fausto","La Mujer del General"],
+				"technics":		"animación de objetos"
+			}
+		]
+	},
+	{	
+		"institution":	"Teatro Las Estaciones",
+		"province":		"Matanzas",
+		"photo":		"Gorro.jpg",
+		"lat":			"22.5767123",
+		"lon":			"-81.3399414",
+		"works":		[
+			{
+				"title":		"El Gorro Color del Cielo",
+				"texts":		["La Calle de los Fantasmas","El Casamiento de Doña Rana"],
+				"technics":		"títere de guante y mando de teclas"
+			}
+		]
+	},
+	{	
+		"institution":	"Tentempié",
+		"province":		"Matanzas",
+		"lat":			"22.5767123",
+		"lon":			"-81.3399414",
+		"works":		[]
+	},
+	{	
+		"institution":	"Los Pintores",
+		"province":		"Villa Clara",
+		"lat":			"22.424398",
+		"lon":			"-79.9416549",
+		"works":		[]
+	},
+	{	
+		"institution":	"El Mejunje",
+		"province":		"Villa Clara",
+		"lat":			"22.406677",
+		"lon":			"-79.967227",
+		"works":		[]
+	},
+	{	
+		"institution":	"Guiñol de Santa Clara",
+		"province":		"Villa Clara",
+		"lat":			"22.424398",
+		"lon":			"-79.9416549",
+		"works":		[]
+	},
+	{	
+		"institution":	"Guiñol de Remedios",
+		"province":		"Villa Clara",
+		"lat":			"22.4963477",
+		"lon":			"-79.5462943",
+		"works":		[]
+	},
+	{	
+		"institution":	"Teatro Alánimo",
+		"province":		"Villa Clara",
+		"lat":			"22.424398",
+		"lon":			"-79.9416549",
+		"works":		[]
+	},
+	{	
+		"institution":	"Teatro Dripy",
+		"province":		"Villa Clara",
+		"lat":			"22.424398",
+		"lon":			"-79.9416549",
+		"works":		[]
+	},
+	{	
+		"institution":	"Para Bajitos",
+		"province":		"Sancti Spíritus",
+		"lat":			"21.9938214",
+		"lon":			"-79.4703885",
+		"works":		[]
+	},
+	{	
+		"institution":	"Teatro Paquelé",
+		"province":		"Sancti Spíritus",
+		"lat":			"21.9938214",
+		"lon":			"-79.4703885",
+		"works":		[]
+	},
+	{	
+		"institution":	"Polichinela",
+		"province":		"Ciego de Ávila",
+		"lat":			"21.9329515",
+		"lon":			"-78.5660852",
+		"works":		[]
+	},
+	{	
+		"institution":	"Guiñol de Camagüey",
+		"province":		"Camagüey",
+		"lat":			"21.3926035",
+		"lon":			"-77.9053182",
+		"works":		[]
+	},
+	{	
+		"institution":	"Teatro de Títeres Olga Alonso",
+		"province":		"Camagüey",
+		"lat":			"21.3926035",
+		"lon":			"-77.9053182",
+		"works":		[]
+	},
+	{	
+		"institution":	"La Comarca",
+		"province":		"Camagüey",
+		"lat":			"21.3926035",
+		"lon":			"-77.9053182",
+		"works":		[]
+	},
+	{	
+		"institution":	"Grupo Retablos",
+		"province":		"Cienfuegos",
+		"photo":		"Retablos.jpg",
+		"lat":			"22.1599753",
+		"lon":			"-80.4437781",
+		"works":		[
+			{
+				"title":		"Si yo te contara",
+				"texts":		["La Calle de los Fantasmas","El Panadero y el Diablo"],
+				"technics":		"títere de bastón"
+			}
+		]
+	},
+	{	
+		"institution":	"Guiñol de Guantánamo",
+		"province":		"Guantánamo",
+		"photo":		"Guantanamo.jpg",
+		"lat":			"20.1400094",
+		"lon":			"-75.2128996",
+		"works":		[
+			{
+				"title":		"La Calle de los Fantasmas",
+				"texts":		["La Calle de los Fantasmas"],
+				"technics":		"títere de varilla"
+			},
+			{
+				"title":		"El Solar de Villa Fañe",
+				"texts":		["La Calle de los Fantasmas","Vida, Paasión y Muerte de la Vecina de Enfrente","El Fantasma","El Pícaro Burlado","El Panadero y el Diablo"],
+				"technics":		"títere de guante"
+			},
+			{
+				"title":		"El Panadero y el Diablo",
+				"texts":		["El Panadero y el Diablo"],
+				"technics":		"títere de guante"
+			},
+			{
+				"title":		"Opalín y el Diablo",
+				"texts":		["de Fernado Tiell"],
+				"technics":		"títere de guante"
+			},
+			{
+				"title":		"El Sereno y el Diablo",
+				"texts":		["de Kike Sánchez"],
+				"technics":		"títere de guante"
+			},		
+			{
+				"title":		"El Gato y los Ratones",
+				"texts":		["de Roberto Espina"],
+				"technics":		"títere de guante"
+			}
+		]
+	},
+	{	
+		"institution":	"Teatro Nacional de Guiñol",
+		"province":		"La Habana",
+		"photo":		"Caballo.jpg",
+		"lat":			"23.1135925",
+		"lon":			"-82.3665956",
+		"works":		[
+			{
+				"title":		"El Pícaro Burlado",
+				"texts":		["El Pícaro Burlado"],
+				"technics":		"títere de guante"
+			},
+			{
+				"title":		"El Panadero y el Diablo",
+				"texts":		["El Panadero y el Diablo"],
+				"technics":		"títere de guante"
+			},
+			{
+				"title":		"La República del Caballo Muerto",
+				"texts":		["de Roberto Espina"],
+				"technics":		"títere de vara"
+			}
+		]
+	},
+	{	
+		"institution":	"Teatro de Muñecos Okantomí",
+		"province":		"La Habana",
+		"lat":			"23.1135925",
+		"lon":			"-82.3665956",
+		"works":		[
+			{
+				"title":		"La Calle de los Fantasmas",
+				"texts":		["La Calle de los Fantasmas"],
+				"technics":		"títere de guante"
+			}
+		]
+	},
+	{	
+		"institution":	"Teatro de La Villa",
+		"province":		"La Habana",
+		"lat":			"23.1371344",
+		"lon":			"-82.3973037",
+		"works":		[
+			{
+				"title":		"Títeres Pícaros y Fantasmas de Javier Villafañe",
+				"texts":		["de Javier Villafañe"],
+				"technics":		"títere de guante"
+			}
+		]
+	},
+	{	
+		"institution":	"Nueva Línea",
+		"province":		"La Habana",
+		"lat":			"23.1382276",
+		"lon":			"-82.3982131",
+		"works":		[
+			{
+				"title":		"Chímpete Chámpata",
+				"texts":		["de Javier Villafañe"],
+				"technics":		"títere de guante"
+			}
+		]
+	},
+	{	
+		"institution":	"El Arca",
+		"province":		"La Habana",
+		"photo":		"ElArca.jpg",
+		"lat":			"23.1135925",
+		"lon":			"-82.3665956",
+		"works":		[
+			{
+				"title":		"El Negrito y los Fantasmas",
+				"texts":		["La Calle de los Fantasmas"],
+				"technics":		"títere de guante"
+			}
+		]
+	},
+	{	
+		"institution":	"La Proa",
+		"province":		"La Habana",
+		"photo":		"LaProa.jpg",
+		"lat":			"23.1135925",
+		"lon":			"-82.3665956",
+		"works":		[
+			{
+				"title":		"Los Diablos en la Maleta",
+				"texts":		["Hay que buscar un diablito"],
+				"technics":		"títere de guante"
+			}
+		]
+	},
+	{	
+		"institution":	"Adalet y sus Títeres",
+		"province":		"La Habana",
+		"lat":			"23.1135925",
+		"lon":			"-82.3665956",
+		"works":		[]
+	},
+	{	
+		"institution":	"Chichiricú",
+		"province":		"La Habana",
+		"lat":			"23.1135925",
+		"lon":			"-82.3665956",
+		"works":		[]
+	},
+	{	
+		"institution":	"Hilos Mágicos",
+		"province":		"La Habana",
+		"lat":			"23.1135925",
+		"lon":			"-82.3665956",
+		"works":		[]
+	},
+	{	
+		"institution":	"Teatro Viajero",
+		"province":		"La Habana",
+		"lat":			"23.1135925",
+		"lon":			"-82.3665956",
+		"works":		[]
+	},
+	{	
+		"institution":	"Titerecuento",
+		"province":		"La Habana",
+		"lat":			"23.1135925",
+		"lon":			"-82.3665956",
+		"works":		[]
+	}
+]

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>La Isla de los Fantasmas</title>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	<script src="lib/oms.min.js"></script>
+
+	<script src="data.json"></script>
+	<style type="text/css">
+		html, body, #map {
+			height: 100%;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+		.custom img {
+			width: 100%;
+		}
+		.leaflet-popup-content {
+    		margin: 6px 10px;
+    		line-height: 1.2;
+		}
+		h2, h3 {
+    		padding: 0;
+		}
+		.leaflet-popup-content-wrapper {
+    		border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div id="map"></div>
+</body>
+<script type="text/javascript">
+
+	var z = 7;
+	var lat = 21.105;
+	var lon = -79.332;
+	//var m = 0;
+	var southWest = L.latLng(24.717, -85.902),
+    	northEast = L.latLng(17.686, -72.653),
+    	bounds = L.latLngBounds(southWest, northEast);
+	//console.log(geo);
+
+	var LeafIcon = L.Icon.extend({
+		options: {
+			shadowUrl: 'images/shadow1.png',
+			iconSize: [40, 50],
+			shadowSize: [80, 27],
+			iconAnchor: [20, 48],
+			shadowAnchor: [19, 24],
+			popupAnchor:  [-10, -45]
+		}
+	});
+
+	var skyIcon = new LeafIcon({
+		iconUrl: 'images/azulito.png'
+	});
+
+	var blueIcon = new LeafIcon({
+		iconUrl: 'images/azulone.png'
+	});
+
+	var devIcon = new LeafIcon({
+		shadowUrl: 'images/shadow2.png',
+		iconUrl: 'images/diablito.png',
+		iconSize: [47, 46],
+		shadowSize: [80, 25],
+		iconAnchor: [23, 44],
+		shadowAnchor: [19, 23],
+		popupAnchor:  [0, -45]
+	});
+
+	var map = L.map('map', {
+		zoomControl: false,
+		//maxBounds: bounds
+		}).setView([lat, lon],z);
+
+	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+		maxZoom: 18,
+		minZoom: 6,
+		id: 'elpbatista.n56ifpal',
+		accessToken: 'pk.eyJ1IjoiZWxwYmF0aXN0YSIsImEiOiJ4YlBmNmlJIn0.x0lZKcK907BWTS4LV9dkHA',
+		}).addTo(map);
+
+	var oms = new OverlappingMarkerSpiderfier(map, {
+		keepSpiderfied: true,
+		circleSpiralSwitchover: Infinity,
+		legWeight: 0.5
+	});
+
+	oms.addListener('spiderfy', function(markers) {
+  		map.closePopup();
+	});
+
+	var customOptions =
+        {
+        'minWidth': '300',
+        'autoPan': false,
+        'className': 'custom'
+        }
+
+	for (var i = 0; i < data.length; i++) {
+		var d = data[i];
+		var title = d['institution'];
+		var province = d['province'];
+		var photo = (d['photo'])?'</p><img src="images/photo/'+d['photo']+'"/>':'';
+		var works = d['works'];
+		var pworks = '';
+		if (works) {
+			for (var j = 0; j < works.length; j++) {
+				var wtitle = works[j]['title'];
+				var wttech = works[j]['technics'];
+				var wtexts = (works[j]['texts'].length>1)?works[j]['texts'].join(", "):works[j]['texts'][0];
+				pworks += '<h3>'+wtitle+'</h3><em>'+wttech+'</em><br /><p><strong>textos: </strong>'+wtexts+'</p>';
+			}
+		};
+		var customPopup = '<h2>'+title+'</h2><em>'+province+'</em>'+photo+pworks;
+		fIcon = (d['works'].length!=0)?((d['works'][0]['texts'][0]=='La Calle de los Fantasmas')?blueIcon:skyIcon):devIcon;
+		var marker = L.marker(new L.LatLng(d['lat'], d['lon']), { title: title, icon: fIcon })
+			.bindPopup(customPopup,customOptions)
+			.addTo(map);
+			oms.addMarker(marker);
+			marker.fire('click');
+	}
+	//marker.fire('click');
+</script>
+</html>
