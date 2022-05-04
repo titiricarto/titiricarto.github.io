@@ -78,19 +78,11 @@
 		//maxBounds: bounds
 		}).setView([lat, lon],z);
 
-// 	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-// 		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-// 		maxZoom: 18,
-// 		minZoom: 6,
-// 		id: 'elpbatista.n56ifpal',
-// 		accessToken: 'pk.eyJ1IjoiZWxwYmF0aXN0YSIsImEiOiJ4YlBmNmlJIn0.x0lZKcK907BWTS4LV9dkHA',
-// 		}).addTo(map);
 	
-	// add the OpenStreetMap tiles
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-      }).addTo(map);
+      	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        	maxZoom: 19,
+        	attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+      		}).addTo(map);
 
 	var oms = new OverlappingMarkerSpiderfier(map, {
 		keepSpiderfied: true,
